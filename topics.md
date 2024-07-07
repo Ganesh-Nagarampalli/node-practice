@@ -71,7 +71,7 @@
 
 - npm install -g packageName     //for global
 
-- package.json - manifest file (stores im info abt project/package)
+- package.json - manifest file (stores im info abt project/package) it is created after running npm init [for more info abt package.json](https://nodesource.com/blog/the-basics-of-package-json/)
 
 - manual approach (create package.json in the root, create properties etc)
 
@@ -81,6 +81,64 @@
 
 - node_modules folder stores all the dependencies
 
+- npm install : is used to install dependencies that are listed in the package.json file.
+
 ## gitignore:
 
 - .gitignore file is used to specify files and directories that should be ignored by git.
+
+## nodemon:
+
+- nodemon is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
+
+- npm install -g nodemon (globally)
+
+- npm i nodemon -D (locally)
+
+- npm i nodemon --save-dev (locally)
+
+- nodemon app.js (instead of node app.js)
+
+## scripts property in package.json:
+
+- scripts property is used to define scripts that can be run using npm.
+
+- Example : "start": "node app.js" so now we can run `npm start` instead of `node app.js`
+
+- npm scriptName vs npm run scriptName : npm scriptName can be used if the scriptName is recognized by npm such as start, test, etc. If the scriptName is not recognized by npm, then we have to use npm run scriptName.
+
+## uninstalling a package:
+
+- npm uninstall packageName
+
+## package-lock.json:
+
+- package-lock.json is automatically generated for any operations where npm modifies either the node_modules tree, or package.json.
+
+- It describes the exact tree that was generated, such that subsequent installs are able to generate identical trees, regardless of intermediate dependency updates.
+
+
+## To check whether a package is installed globally or locally:
+
+- npm list -g packageName (for global)
+
+- npm list packageName (for local)
+
+ ## Event Loop:
+
+ - [Event Loop](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)
+
+- refer chatGpt
+
+- event loop is responsible for executing the code, collecting and processing events, and executing queued sub-tasks.
+
+- offloading means to send a task to another device or system to be processed.
+
+- Node.js offloads the I/O operations to the OS kernel.
+
+- Node.js is single-threaded and event-driven.
+
+- async operations are offloaded to the OS kernel. such as file system operations, network operations, settimeout, etc.
+
+- after completion of the sync code, the event loop will check the event queue for any async code to be executed.
+
