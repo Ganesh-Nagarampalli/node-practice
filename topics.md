@@ -142,3 +142,14 @@
 
 - after completion of the sync code, the event loop will check the event queue for any async code to be executed.
 
+
+## promises:
+
+- A promise is an object representing the eventual completion or failure of an asynchronous operation.
+
+- A promise is in one of these states:
+  - pending: initial state, neither fulfilled nor rejected.
+  - fulfilled: meaning that the operation completed successfully.
+  - rejected: meaning that the operation failed.
+
+- A promise is settled if it’s not pending (it has been resolved or rejected).
