@@ -153,3 +153,10 @@
   - rejected: meaning that the operation failed.
 
 - A promise is settled if it’s not pending (it has been resolved or rejected).
+
+### purpose of promises:
+1. Simplify Asynchronous Code : 
+    Promises make asynchronous code easier to read and write, avoiding "callback hell" (a situation where callbacks are nested within other callbacks, making the code hard to read and maintain).
+2. Improve Error Handling
+3. Chaining Promises : 
+    Promises allow chaining of multiple asynchronous operations, enabling better flow and control of asynchronous sequences.
